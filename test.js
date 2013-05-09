@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 
-var db = mongoose.connection;
+    var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
 
@@ -12,9 +12,9 @@ db.once('open', function callback() {
 
     kittySchema.methods.speak = function() {
         var greeting = this.name
-    ? "Meow name is " + this.name
-    : "I don't have a name";
-console.log(greeting);
+        ? "Meow name is " + this.name
+        : "I don't have a name";
+        console.log(greeting);
     };
 
     var Kitten = mongoose.model('Kitten', kittySchema);
